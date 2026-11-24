@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis 14 Años - Grecia | Invitación Digital</title>
+    <title>Mis 14 Años - Grecia Leon Acosta | Invitación Digital</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,9 +11,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
@@ -21,16 +21,17 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#102a45',
-                        royal: '#1b3b6f',
-                        softblue: '#4a80b4',
-                        sky: '#a5c4e8',
-                        lightbg: '#f4f8fc',
+                        iceDeep: '#09192f',
+                        iceMid: '#13315c',
+                        iceGlacier: '#3b73b9',
+                        iceFrost: '#a2d2ff',
+                        iceCrystal: '#e2f1ff',
+                        iceSilver: '#cbd5e1',
                     },
                     fontFamily: {
+                        royal: ['"Cinzel Decorative"', 'serif'],
                         serif: ['"Cormorant Garamond"', 'serif'],
                         script: ['"Great Vibes"', 'cursive'],
-                        calligraphy: ['"Alex Brush"', 'cursive'],
                         sans: ['"Montserrat"', 'sans-serif'],
                     }
                 }
@@ -39,20 +40,106 @@
     </script>
 
     <style>
-        /* Textured watercolor paper background */
+        /* Frozen Winter Night & Northern Lights Background */
         body {
-            background-color: #f7fafc;
+            background-color: #09192f;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(185, 214, 242, 0.4) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(165, 196, 232, 0.35) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
+                radial-gradient(ellipse at 20% 15%, rgba(56, 189, 248, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 25%, rgba(45, 212, 191, 0.2) 0%, transparent 48%),
+                radial-gradient(ellipse at 50% 85%, rgba(96, 165, 250, 0.25) 0%, transparent 55%),
+                linear-gradient(180deg, #071324 0%, #102a4c 45%, #194175 100%);
             font-family: 'Montserrat', sans-serif;
-            color: #102a45;
+            color: #e2f1ff;
             overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
         }
 
-        /* Sparkle Canvas Overlay */
-        #sparkleCanvas {
+        /* Animated Aurora Borealis Shimmer */
+        .aurora-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(125, 211, 252, 0.14), rgba(52, 211, 153, 0.08), transparent 60%);
+            animation: auroraDrift 16s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes auroraDrift {
+            0% { transform: translate(-5%, -3%) rotate(0deg) scale(1); }
+            50% { transform: translate(4%, 3%) rotate(4deg) scale(1.06); }
+            100% { transform: translate(-2%, 5%) rotate(-3deg) scale(1.02); }
+        }
+
+        /* Frosted Ice Glassmorphic Card */
+        .ice-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.14) 0%, rgba(162, 210, 255, 0.08) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1.5px solid rgba(226, 241, 255, 0.42);
+            box-shadow: 
+                0 25px 50px -12px rgba(4, 12, 24, 0.65),
+                inset 0 0 25px rgba(162, 210, 255, 0.18);
+            border-radius: 2rem;
+        }
+
+        /* Inner Frost Sub-cards */
+        .ice-panel {
+            background: rgba(13, 36, 68, 0.55);
+            border: 1px solid rgba(162, 210, 255, 0.3);
+            box-shadow: inset 0 0 12px rgba(162, 210, 255, 0.1);
+            border-radius: 1.25rem;
+        }
+
+        /* Subtle Glow for Frozen Script Typography */
+        .frost-glow {
+            text-shadow: 
+                0 0 16px rgba(162, 210, 255, 0.65),
+                0 2px 6px rgba(7, 19, 36, 0.8);
+        }
+
+        /* Floating Snowflake Animation */
+        @keyframes slowSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.08); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .snowflake-spin {
+            animation: slowSpin 18s linear infinite;
+        }
+
+        /* Envelope Cover Transition */
+        #envelope-screen {
+            transition: opacity 0.85s ease, transform 0.85s ease, visibility 0.85s;
+            background: radial-gradient(circle at center, #163a6b 0%, #09192f 100%);
+        }
+
+        #envelope-screen.opened {
+            opacity: 0;
+            transform: scale(1.08);
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Crystal Ice Button */
+        .btn-ice {
+            background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-ice:hover {
+            background: linear-gradient(135deg, #7dd3fc 0%, #3b82f6 100%);
+            box-shadow: 0 8px 26px rgba(125, 211, 252, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Falling Snow Canvas */
+        #snowCanvas {
             position: fixed;
             top: 0;
             left: 0;
@@ -62,773 +149,490 @@
             z-index: 5;
         }
 
-        /* Butterfly Flutter Animations */
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-            50% { transform: translateY(-12px) rotate(4deg) scale(1.05); }
-        }
-
-        @keyframes flutterWing {
-            0%, 100% { transform: scaleX(1); }
-            50% { transform: scaleX(0.4); }
-        }
-
-        .butterfly {
-            animation: floatSlow 5s ease-in-out infinite;
-            transform-origin: center;
-        }
-
-        .butterfly-wing {
-            animation: flutterWing 0.4s ease-in-out infinite;
-            transform-origin: center;
-        }
-
-        /* Watercolor floral decoration positioning */
-        .floral-bg-top-right {
-            position: absolute;
-            top: -30px;
-            right: -30px;
-            width: 240px;
-            pointer-events: none;
-            z-index: 2;
-            opacity: 0.9;
-        }
-
-        .floral-bg-bottom-left {
-            position: absolute;
-            bottom: -30px;
-            left: -30px;
-            width: 240px;
-            pointer-events: none;
-            z-index: 2;
-            opacity: 0.9;
-        }
-
-        /* Envelope interactive opening animation */
-        #envelope-screen {
-            transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
-        }
-
-        #envelope-screen.opened {
-            opacity: 0;
-            transform: scale(1.1);
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        /* Glassmorphism Card Style */
-        .card-frame {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(185, 214, 242, 0.6);
-            box-shadow: 0 15px 35px -5px rgba(27, 59, 111, 0.12), 0 0 15px rgba(165, 196, 232, 0.3);
-        }
-
-        /* Pulse glow for buttons */
-        .btn-glow {
-            box-shadow: 0 4px 15px rgba(27, 59, 111, 0.25);
-            transition: all 0.3s ease;
-        }
-        .btn-glow:hover {
-            box-shadow: 0 6px 20px rgba(27, 59, 111, 0.4);
-            transform: translateY(-2px);
-        }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 6px;
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09192f;
         }
         ::-webkit-scrollbar-thumb {
-            background: #a5c4e8;
-            border-radius: 3px;
+            background: #3b73b9;
+            border-radius: 4px;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-3 sm:p-6 relative">
+<body class="flex flex-col items-center justify-center p-3 sm:p-6 relative">
 
-    <!-- Interactive Canvas Sparkles -->
-    <canvas id="sparkleCanvas"></canvas>
+    <!-- AURORA & FALLING SNOW -->
+    <div class="aurora-bg"></div>
+    <canvas id="snowCanvas"></canvas>
 
     <!-- FLOATING MUSIC TOGGLE BUTTON -->
-    <button id="musicToggleBtn" onclick="toggleAudio()" class="fixed top-4 right-4 z-40 w-12 h-12 rounded-full bg-white/90 border border-sky/50 text-royal shadow-lg flex items-center justify-center hover:bg-sky/20 transition-all duration-300" title="Activar/Desactivar Música">
-        <i id="musicIcon" class="fas fa-music text-lg"></i>
+    <button id="musicToggleBtn" onclick="toggleAudio()" class="fixed top-4 right-4 z-40 w-12 h-12 rounded-full bg-iceMid/85 border border-iceFrost/50 text-iceCrystal shadow-lg flex items-center justify-center hover:bg-iceGlacier transition-all duration-300 backdrop-blur-md cursor-pointer" title="Música Mágica">
+        <i id="musicIcon" class="fas fa-music text-base text-iceFrost"></i>
     </button>
 
-    <!-- ENVELOPE / APERTURA INICIAL COVER -->
-    <div id="envelope-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-lightbg/95 p-4 backdrop-blur-md">
-        <div class="max-w-md w-full bg-white rounded-3xl p-8 shadow-2xl border border-sky/40 text-center relative overflow-hidden flex flex-col items-center">
-            
-            <!-- Floral visual details on envelope -->
-            <div class="absolute -top-10 -right-10 w-40 opacity-80">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#B9D6F2" d="M47.5,-57.2C60.8,-46.3,70.5,-30.9,73.4,-14.3C76.3,2.3,72.4,20.1,63.1,34.7C53.8,49.3,39.1,60.7,22.4,66.1C5.7,71.5,-13,70.9,-29.4,64.4C-45.8,57.9,-59.9,45.5,-67.2,29.8C-74.5,14.1,-75,-4.9,-68.8,-21.2C-62.6,-37.5,-49.7,-51.1,-35.3,-61.5C-20.9,-71.9,-5.1,-79.1,7.9,-72.8C20.9,-66.5,34.2,-68.1,47.5,-57.2Z" transform="translate(100 100)" />
-                </svg>
-            </div>
-
-            <!-- Butterfly Icon -->
-            <div class="butterfly mb-4 text-softblue">
-                <svg class="w-16 h-16 drop-shadow-md" viewBox="0 0 100 100" fill="currentColor">
-                    <path class="butterfly-wing" d="M50 50 C30 20, 10 30, 20 60 C30 80, 45 65, 50 50 Z" fill="#4a80b4"/>
-                    <path class="butterfly-wing" d="M50 50 C70 20, 90 30, 80 60 C70 80, 55 65, 50 50 Z" fill="#1b3b6f"/>
-                    <circle cx="50" cy="50" r="3" fill="#102a45"/>
-                </svg>
-            </div>
-
-            <p class="font-serif text-lg text-softblue tracking-widest uppercase mb-1">Has recibido una invitación</p>
-            <h1 class="font-calligraphy text-5xl text-royal my-2">Mis 14 Años</h1>
-            <h2 class="font-script text-6xl text-royal mb-6">Grecia</h2>
-            <h2 class="font-script text-6xl text-royal mb-6">Leon Acosta</h2>
-            
-            <p class="text-sm text-gray-600 mb-8 max-w-xs font-light">Toca el botón para desplegar la tarjeta de invitación interactiva.</p>
-
-            <button onclick="openEnvelope()" class="btn-glow px-8 py-3.5 rounded-full bg-royal hover:bg-navy text-white font-medium tracking-wider flex items-center space-x-3 text-base transition-all">
-                <span>Abrir Invitación</span>
-                <i class="fas fa-envelope-open text-sky"></i>
-            </button>
+    <!-- WELCOME ENVELOPE OVERLAY -->
+    <div id="envelope-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 text-center">
+        <!-- Decorative Crystal Snowflake SVG -->
+        <div class="w-24 h-24 mb-5 text-iceFrost snowflake-spin drop-shadow-[0_0_15px_rgba(162,210,255,0.7)]">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="50" y1="8" x2="50" y2="92"/>
+                <line x1="8" y1="50" x2="92" y2="50"/>
+                <line x1="20" y1="20" x2="80" y2="80"/>
+                <line x1="80" y1="20" x2="20" y2="80"/>
+                <polyline points="40,18 50,28 60,18"/>
+                <polyline points="40,82 50,72 60,82"/>
+                <polyline points="18,40 28,50 18,60"/>
+                <polyline points="82,40 72,50 82,60"/>
+                <circle cx="50" cy="50" r="10" fill="rgba(162,210,255,0.25)"/>
+            </svg>
         </div>
+
+        <p class="font-serif italic text-xl sm:text-2xl text-iceFrost tracking-wide mb-2">Una celebración mágica está por comenzar...</p>
+        <h2 class="font-royal text-2xl sm:text-3xl text-white tracking-widest uppercase mb-1 frost-glow">Mis 14 Años</h2>
+        <p class="font-script text-3xl sm:text-4xl text-iceFrost mb-8 px-4 leading-relaxed">Grecia Leon Acosta</p>
+
+        <button onclick="openEnvelope()" class="btn-ice text-white font-medium px-8 py-4 rounded-full text-sm sm:text-base tracking-widest uppercase flex items-center gap-3 cursor-pointer">
+            <i class="far fa-snowflake text-lg"></i>
+            <span>Abrir Invitación</span>
+        </button>
     </div>
 
-
-    <!-- MAIN INVITATION CARD CONTAINER -->
-    <main class="w-full max-w-lg card-frame rounded-3xl p-6 sm:p-10 relative overflow-hidden my-4 z-10 transition-all">
-        
-        <!-- WATERCOLOR FLORAL VECTOR TOP RIGHT -->
-        <svg class="floral-bg-top-right" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.85">
-                <circle cx="150" cy="50" r="35" fill="#B9D6F2" opacity="0.6"/>
-                <circle cx="170" cy="70" r="28" fill="#A5C4E8" opacity="0.7"/>
-                <circle cx="130" cy="75" r="25" fill="#4A80B4" opacity="0.4"/>
-                <circle cx="160" cy="35" r="20" fill="#1B3B6F" opacity="0.3"/>
-                <path d="M120 30 Q140 10 160 25 Q140 40 120 30 Z" fill="#6B8E23" opacity="0.5"/>
-                <path d="M170 100 Q190 80 180 110 Q160 120 170 100 Z" fill="#556B2F" opacity="0.4"/>
-                <circle cx="150" cy="50" r="6" fill="#102A45" opacity="0.4"/>
-                <circle cx="170" cy="70" r="5" fill="#102A45" opacity="0.4"/>
-            </g>
-        </svg>
-
-        <!-- WATERCOLOR FLORAL VECTOR BOTTOM LEFT -->
-        <svg class="floral-bg-bottom-left" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.85">
-                <circle cx="50" cy="150" r="38" fill="#B9D6F2" opacity="0.6"/>
-                <circle cx="30" cy="130" r="30" fill="#A5C4E8" opacity="0.7"/>
-                <circle cx="70" cy="125" r="24" fill="#4A80B4" opacity="0.4"/>
-                <circle cx="40" cy="165" r="22" fill="#1B3B6F" opacity="0.3"/>
-                <path d="M80 170 Q60 190 40 175 Q60 160 80 170 Z" fill="#6B8E23" opacity="0.5"/>
-                <path d="M30 100 Q10 120 20 90 Q40 80 30 100 Z" fill="#556B2F" opacity="0.4"/>
-                <circle cx="50" cy="150" r="6" fill="#102A45" opacity="0.4"/>
-                <circle cx="30" cy="130" r="5" fill="#102A45" opacity="0.4"/>
-            </g>
-        </svg>
-
-        <!-- FLOATING BUTTERFLIES DECORATION -->
-        <div class="butterfly absolute top-12 left-6 text-softblue opacity-80 z-20">
-            <svg class="w-10 h-10" viewBox="0 0 100 100" fill="currentColor">
-                <path class="butterfly-wing" d="M50 50 C30 20, 10 30, 20 60 C30 80, 45 65, 50 50 Z" fill="#4a80b4"/>
-                <path class="butterfly-wing" d="M50 50 C70 20, 90 30, 80 60 C70 80, 55 65, 50 50 Z" fill="#1b3b6f"/>
-            </svg>
-        </div>
-
-        <div class="butterfly absolute bottom-40 right-6 text-sky opacity-75 z-20" style="animation-delay: -2.5s;">
-            <svg class="w-9 h-9" viewBox="0 0 100 100" fill="currentColor">
-                <path class="butterfly-wing" d="M50 50 C30 20, 10 30, 20 60 C30 80, 45 65, 50 50 Z" fill="#a5c4e8"/>
-                <path class="butterfly-wing" d="M50 50 C70 20, 90 30, 80 60 C70 80, 55 65, 50 50 Z" fill="#4a80b4"/>
-            </svg>
-        </div>
-
-        <!-- INVITATION HEADER SECTION -->
-        <div class="text-center relative z-20 pt-4">
+    <!-- MAIN INVITATION CARD -->
+    <main class="w-full max-w-lg mx-auto relative z-10 my-4 sm:my-8">
+        <div class="ice-card relative overflow-hidden p-6 sm:p-10 text-center">
             
-            <!-- Mis 14 Años -->
-            <div class="flex items-center justify-center space-x-2">
-                <span class="font-serif text-3xl sm:text-4xl text-royal tracking-wide">Mis</span>
-                <span class="font-serif text-6xl sm:text-7xl font-bold text-royal px-1 leading-none">14</span>
-                <span class="font-serif text-3xl sm:text-4xl text-royal tracking-wide">Años</span>
+            <!-- TOP CRYSTAL SNOWFLAKES -->
+            <div class="flex justify-between items-center text-iceFrost/60 mb-2">
+                <i class="far fa-snowflake text-2xl snowflake-spin"></i>
+                <div class="h-px flex-1 mx-4 bg-gradient-to-r from-transparent via-iceFrost/50 to-transparent"></div>
+                <i class="fas fa-sparkles text-lg text-iceFrost"></i>
+                <div class="h-px flex-1 mx-4 bg-gradient-to-r from-transparent via-iceFrost/50 to-transparent"></div>
+                <i class="far fa-snowflake text-2xl snowflake-spin"></i>
             </div>
 
-            <!-- Grecia -->
-            <h1 class="font-script text-7xl sm:text-8xl text-royal my-2 tracking-tight drop-shadow-sm select-none">
-                Grecia
-            </h1>
+            <!-- HEADER: MIS 14 AÑOS -->
+            <div class="mt-3 mb-2">
+                <span class="font-royal text-xs sm:text-sm tracking-[0.28em] uppercase text-iceFrost block mb-1">Te invito a celebrar</span>
+                <div class="flex items-center justify-center gap-3 sm:gap-4">
+                    <span class="font-serif italic text-2xl sm:text-3xl text-iceCrystal">Mis</span>
+                    <span class="font-royal text-6xl sm:text-7xl font-bold text-white frost-glow leading-none">14</span>
+                    <span class="font-serif italic text-2xl sm:text-3xl text-iceCrystal">Años</span>
+                </div>
+            </div>
 
-            <!-- Invitation Message -->
-            <p class="font-serif text-lg sm:text-xl text-royal/90 max-w-xs mx-auto leading-snug mt-2 italic font-normal">
-                Te invito a celebrar conmigo este día tan especial ¡No Faltes!
+            <!-- FULL NAME (SIZED & PADDED TO PREVENT CLIPPING) -->
+            <div class="my-4 px-2 py-2 overflow-visible">
+                <h1 class="font-script text-4xl sm:text-5xl text-white frost-glow leading-relaxed tracking-normal">
+                    Grecia Leon Acosta
+                </h1>
+            </div>
+
+            <!-- INVITATION MESSAGE -->
+            <p class="font-serif italic text-lg sm:text-xl text-iceCrystal/95 max-w-md mx-auto leading-relaxed mb-7 px-2">
+                "Hay momentos mágicos en la vida que se vuelven inolvidables cuando se comparten con las personas que más quieres. ¡No faltes!"
             </p>
 
-            <!-- Decorative Divider -->
-            <div class="flex items-center justify-center my-6 space-x-3">
-                <div class="h-px bg-gradient-to-r from-transparent via-sky to-transparent w-24"></div>
-                <i class="fas fa-sparkles text-sky text-xs"></i>
-                <div class="h-px bg-gradient-to-r from-transparent via-sky to-transparent w-24"></div>
-            </div>
-
-            <!-- DATE & TIME DISPLAY -->
-            <div class="my-4">
-                <h2 class="font-serif text-3xl sm:text-4xl text-royal font-semibold tracking-wide">
-                    Diciembre 20
-                </h2>
-                <p class="font-serif text-2xl text-softblue mt-1">
-                    4:00pm
-                </p>
-            </div>
-        </div>
-
-        <!-- COUNTDOWN TIMER SECTION -->
-        <section class="my-8 relative z-20 bg-white/70 rounded-2xl p-4 border border-sky/30 shadow-sm text-center">
-            <p class="font-serif text-sm uppercase tracking-widest text-softblue font-semibold mb-3">Faltan tan solo</p>
-            <div class="grid grid-cols-4 gap-2 text-center">
-                <div class="bg-lightbg p-2.5 rounded-xl border border-sky/40">
-                    <span id="cd-days" class="font-serif text-2xl sm:text-3xl font-bold text-royal block">00</span>
-                    <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-medium">Días</span>
+            <!-- DATE & TIME PANEL -->
+            <div class="ice-panel p-5 mb-6">
+                <div class="flex items-center justify-center gap-2 text-iceFrost text-xs uppercase tracking-[0.22em] font-semibold mb-2">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Fecha y Hora</span>
                 </div>
-                <div class="bg-lightbg p-2.5 rounded-xl border border-sky/40">
-                    <span id="cd-hours" class="font-serif text-2xl sm:text-3xl font-bold text-royal block">00</span>
-                    <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-medium">Horas</span>
-                </div>
-                <div class="bg-lightbg p-2.5 rounded-xl border border-sky/40">
-                    <span id="cd-minutes" class="font-serif text-2xl sm:text-3xl font-bold text-royal block">00</span>
-                    <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-medium">Min</span>
-                </div>
-                <div class="bg-lightbg p-2.5 rounded-xl border border-sky/40">
-                    <span id="cd-seconds" class="font-serif text-2xl sm:text-3xl font-bold text-royal block">00</span>
-                    <span class="text-[10px] sm:text-xs text-gray-500 uppercase tracking-wider font-medium">Seg</span>
-                </div>
-            </div>
-        </section>
+                <p class="font-royal text-xl sm:text-2xl text-white tracking-wider mb-1">Diciembre 20</p>
+                <p class="font-serif text-xl sm:text-2xl text-iceFrost font-semibold">4:00 PM</p>
 
-        <!-- LOCATION & ADDRESS SECTION -->
-        <section class="my-6 relative z-20 text-center bg-white/80 rounded-2xl p-5 border border-sky/30 shadow-sm">
-            <div class="w-10 h-10 rounded-full bg-sky/20 text-royal flex items-center justify-center mx-auto mb-2">
-                <i class="fas fa-map-marker-alt text-lg"></i>
-            </div>
-            
-            <h3 class="font-serif text-xl font-bold text-royal mb-1">Lugar de la Celebración</h3>
-            
-            <p id="addressText" class="font-serif text-lg text-gray-700 font-medium">
-                Calle : Presa valsequillo 580
-            </p>
-            <p class="text-xs text-gray-500 mb-4">¡Te esperamos para compartir juntos este momento!</p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5">
-                <a href="https://www.google.com/maps/search/?api=1&query=Calle+Presa+valsequillo+580" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-royal hover:bg-navy text-white text-xs uppercase tracking-wider font-semibold flex items-center justify-center space-x-2 transition-all shadow-sm">
-                    <i class="fas fa-directions"></i>
-                    <span>Ver en Google Maps</span>
-                </a>
-                
-                <button onclick="copyAddress()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-sky/30 hover:bg-sky/50 text-royal text-xs uppercase tracking-wider font-semibold flex items-center justify-center space-x-2 transition-all">
-                    <i class="fas fa-copy"></i>
-                    <span>Copiar Dirección</span>
-                </button>
-            </div>
-        </section>
-
-        <!-- MONOGRAM & CODE / DRESS CODE (DLP) -->
-        <section class="my-6 text-center relative z-20">
-            <div class="inline-block px-6 py-2 rounded-full border border-sky/40 bg-white/60 backdrop-blur-sm shadow-xs">
-                <span class="font-serif text-xs text-gray-500 uppercase tracking-widest mr-2">Código / Nota:</span>
-                <span class="font-script text-3xl text-royal font-bold tracking-wider align-middle">DLP</span>
-            </div>
-        </section>
-
-        <!-- RSVP WHATSAPP INTERACTIVE SECTION -->
-        <section class="mt-8 relative z-20 bg-white/90 rounded-2xl p-5 sm:p-6 border border-sky/40 shadow-md">
-            <div class="flex items-center space-x-2 mb-4">
-                <i class="fab fa-whatsapp text-2xl text-emerald-500"></i>
-                <h3 class="font-serif text-xl font-bold text-royal">Confirmar Asistencia</h3>
-            </div>
-
-            <form id="rsvpForm" onsubmit="sendWhatsAppRSVP(event)" class="space-y-4">
-                <!-- Guest Name -->
-                <div>
-                    <label class="block text-xs font-semibold text-royal uppercase tracking-wider mb-1">Tu Nombre Completo</label>
-                    <input type="text" id="guestName" required placeholder="Ej. Familia García / María López" class="w-full px-3.5 py-2.5 rounded-xl border border-sky/50 focus:outline-none focus:ring-2 focus:ring-royal/40 bg-white text-sm text-gray-800">
-                </div>
-
-                <!-- Attendance options -->
-                <div>
-                    <label class="block text-xs font-semibold text-royal uppercase tracking-wider mb-1.5">¿Nos acompañarás?</label>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button type="button" id="btnYes" onclick="selectAttendance(true)" class="py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-medium text-xs flex items-center justify-center space-x-1.5 transition-all shadow-sm">
-                            <i class="fas fa-check-circle"></i>
-                            <span>¡Sí asistiré!</span>
-                        </button>
-                        <button type="button" id="btnNo" onclick="selectAttendance(false)" class="py-2.5 px-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-600 font-medium text-xs flex items-center justify-center space-x-1.5 transition-all">
-                            <i class="fas fa-times-circle"></i>
-                            <span>No podré asistir</span>
-                        </button>
+                <!-- LIVE COUNTDOWN -->
+                <div class="grid grid-cols-4 gap-2 sm:gap-3 mt-4 pt-4 border-t border-iceFrost/20">
+                    <div class="bg-iceDeep/60 rounded-xl py-2.5 px-1 border border-iceFrost/20">
+                        <span id="days" class="block font-royal text-xl sm:text-2xl font-bold text-white">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-iceFrost">Días</span>
+                    </div>
+                    <div class="bg-iceDeep/60 rounded-xl py-2.5 px-1 border border-iceFrost/20">
+                        <span id="hours" class="block font-royal text-xl sm:text-2xl font-bold text-white">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-iceFrost">Hrs</span>
+                    </div>
+                    <div class="bg-iceDeep/60 rounded-xl py-2.5 px-1 border border-iceFrost/20">
+                        <span id="minutes" class="block font-royal text-xl sm:text-2xl font-bold text-white">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-iceFrost">Min</span>
+                    </div>
+                    <div class="bg-iceDeep/60 rounded-xl py-2.5 px-1 border border-iceFrost/20">
+                        <span id="seconds" class="block font-royal text-xl sm:text-2xl font-bold text-white">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-iceFrost">Seg</span>
                     </div>
                 </div>
 
-                <!-- Guests count dropdown -->
-                <div id="guestsCountContainer">
-                    <label class="block text-xs font-semibold text-royal uppercase tracking-wider mb-1">Número de Asistentes</label>
-                    <select id="guestCount" class="w-full px-3.5 py-2.5 rounded-xl border border-sky/50 focus:outline-none focus:ring-2 focus:ring-royal/40 bg-white text-sm text-gray-800">
-                        <option value="1 persona">1 Persona (Pase individual)</option>
-                        <option value="2 personas" selected>2 Personas</option>
-                        <option value="3 personas">3 Personas</option>
-                        <option value="4 personas">4 Personas (Familia)</option>
-                        <option value="5 o más personas">5 o más personas</option>
-                    </select>
-                </div>
-
-                <!-- Optional Note -->
-                <div>
-                    <label class="block text-xs font-semibold text-royal uppercase tracking-wider mb-1">Mensaje para Grecia (Opcional)</label>
-                    <textarea id="guestNote" rows="2" placeholder="¡Muchas felicidades Grecia!..." class="w-full px-3.5 py-2 rounded-xl border border-sky/50 focus:outline-none focus:ring-2 focus:ring-royal/40 bg-white text-sm text-gray-800 resize-none"></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm tracking-wide shadow-md flex items-center justify-center space-x-2 transition-all">
-                    <i class="fab fa-whatsapp text-lg"></i>
-                    <span>Confirmar por WhatsApp</span>
+                <button onclick="addToCalendar()" class="mt-4 w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 border border-iceFrost/35 text-xs sm:text-sm font-medium text-iceCrystal transition flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="far fa-calendar-plus text-iceFrost"></i>
+                    <span>Agendar en Google Calendar</span>
                 </button>
-            </form>
-        </section>
+            </div>
 
-        <!-- ADD TO GOOGLE CALENDAR BUTTON -->
-        <div class="mt-6 text-center relative z-20">
-            <button onclick="addToCalendar()" class="inline-flex items-center space-x-2 text-xs font-semibold text-softblue hover:text-royal transition-colors bg-sky/10 px-4 py-2 rounded-full border border-sky/30">
-                <i class="far fa-calendar-plus text-sm"></i>
-                <span>Agregar evento a Google Calendar</span>
-            </button>
+            <!-- LOCATION PANEL -->
+            <div class="ice-panel p-5 mb-6">
+                <div class="flex items-center justify-center gap-2 text-iceFrost text-xs uppercase tracking-[0.22em] font-semibold mb-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lugar del Evento</span>
+                </div>
+                <p class="font-serif text-xl sm:text-2xl text-white font-semibold mb-1">Calle: Presa Valsequillo 580</p>
+                <p class="font-royal text-lg text-iceFrost tracking-widest mt-1">D L P</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-4">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Presa+valsequillo+580" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 rounded-xl btn-ice text-white text-xs sm:text-sm font-medium flex items-center justify-center gap-2">
+                        <i class="fas fa-location-arrow"></i>
+                        <span>Ver en Mapa</span>
+                    </a>
+                    <button onclick="copyAddress()" class="py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 border border-iceFrost/35 text-iceCrystal text-xs sm:text-sm font-medium flex items-center justify-center gap-2 transition cursor-pointer">
+                        <i class="far fa-copy text-iceFrost"></i>
+                        <span id="copyBtnText">Copiar Dirección</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- WHATSAPP RSVP SECTION -->
+            <div class="ice-panel p-5 sm:p-6 text-left">
+                <div class="text-center mb-4">
+                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-iceFrost/20 text-iceFrost mb-2">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </div>
+                    <h3 class="font-royal text-lg sm:text-xl text-white tracking-wider">Confirmar Asistencia</h3>
+                    <p class="text-xs text-iceFrost/90 mt-1">Por favor confirma tu lugar enviando tu respuesta por WhatsApp</p>
+                </div>
+
+                <div class="space-y-3.5">
+                    <div>
+                        <label for="guestName" class="block text-xs font-medium text-iceFrost mb-1">Nombre Completo o Familia *</label>
+                        <input type="text" id="guestName" placeholder="Ej. Sofía Martínez o Familia Martínez" class="w-full px-3.5 py-2.5 rounded-xl bg-iceDeep/75 border border-iceFrost/35 text-white placeholder-iceFrost/45 text-sm focus:outline-none focus:border-iceFrost">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label for="attendance" class="block text-xs font-medium text-iceFrost mb-1">¿Asistirás?</label>
+                            <select id="attendance" onchange="toggleGuestsCount()" class="w-full px-3 py-2.5 rounded-xl bg-iceDeep/75 border border-iceFrost/35 text-white text-sm focus:outline-none focus:border-iceFrost">
+                                <option value="Sí, ¡ahí estaré!">Sí, asistiré</option>
+                                <option value="Lo siento, no podré asistir">No podré ir</option>
+                            </select>
+                        </div>
+                        <!-- Guests count dropdown -->
+                        <div id="guestsCountContainer">
+                            <label for="guestCount" class="block text-xs font-semibold text-iceFrost uppercase tracking-wider mb-1">Número de Asistentes</label>
+                            <select id="guestCount" class="w-full px-3.5 py-2.5 rounded-xl border border-iceFrost/35 focus:outline-none focus:ring-2 focus:ring-iceFrost/40 bg-iceDeep/75 text-sm text-white">
+                                <option value="1 persona">1 Persona (Pase individual)</option>
+                                <option value="2 personas" selected>2 Personas</option>
+                                <option value="3 personas">3 Personas</option>
+                                <option value="4 personas">4 Personas (Familia)</option>
+                                <option value="5 o más personas">5 o más personas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="guestMessage" class="block text-xs font-medium text-iceFrost mb-1">Mensaje para Grecia (Opcional)</label>
+                        <textarea id="guestMessage" rows="2" placeholder="¡Muchas felicidades por tus 14 años!" class="w-full px-3.5 py-2 rounded-xl bg-iceDeep/75 border border-iceFrost/35 text-white placeholder-iceFrost/45 text-sm focus:outline-none focus:border-iceFrost resize-none"></textarea>
+                    </div>
+
+                    <!-- CUSTOM TOAST MESSAGE BOX -->
+                    <div id="feedbackBox" class="hidden p-3 rounded-xl text-xs text-center font-medium"></div>
+
+                    <button onclick="sendWhatsApp()" class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-semibold text-sm tracking-wide shadow-lg shadow-emerald-950/50 flex items-center justify-center gap-2.5 transition transform hover:-translate-y-0.5 cursor-pointer">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>Confirmar por WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="mt-6 pt-4 border-t border-iceFrost/20 text-center">
+                <p class="font-script text-2xl text-iceFrost">¡Te esperamos!</p>
+            </div>
         </div>
-
-        <!-- FOOTER MONOGRAM -->
-        <div class="mt-8 text-center relative z-20">
-            <p class="font-script text-4xl text-royal/60">Grecia 14</p>
-            <p class="text-[10px] text-gray-400 mt-1 uppercase tracking-widest">20 de Diciembre de 2026</p>
-        </div>
-
     </main>
 
-    <!-- TOAST NOTIFICATION SYSTEM -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-royal text-white px-5 py-3 rounded-2xl shadow-xl flex items-center space-x-3 text-sm opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4">
-        <i id="toastIcon" class="fas fa-check-circle text-sky"></i>
-        <span id="toastMsg">Mensaje copiado</span>
-    </div>
-
-    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // STRICTLY HARDCODED DESTINATION WHATSAPP NUMBER (NO LOCAL STORAGE OVERRIDE, NO GEAR ICON)
+        // FIXED HOST WHATSAPP NUMBER (52 + 3314897932)
         const HOST_PHONE_NUMBER = "523314897932";
-        let willAttend = true;
 
-        /* ==========================================================================
-           MODERN INSTRUMENTAL WEB AUDIO ENGINE (LO-FI / RHODES PIANO / AMBIENT PAD)
-           ========================================================================== */
-        let audioCtx = null;
-        let masterGain = null;
-        let delayNode = null;
-        let isAudioPlaying = false;
-        let schedulerTimer = null;
-        let currentStep = 0;
-        let nextNoteTime = 0;
-
-        // Tempo & Harmony settings
-        const BPM = 76;
-        const secondsPerBeat = 60.0 / BPM;
-        const stepTime = secondsPerBeat / 2;
-
-        const chords = [
-            { bass: 174.61, pad: [174.61, 261.63, 329.63, 440.00], arp: [523.25, 659.25, 783.99, 880.00, 1046.50] },
-            { bass: 164.81, pad: [164.81, 246.94, 293.66, 392.00], arp: [493.88, 587.33, 783.99, 987.77] },
-            { bass: 146.83, pad: [146.83, 220.00, 261.63, 349.23], arp: [523.25, 698.46, 880.00, 1046.50] },
-            { bass: 130.81, pad: [130.81, 196.00, 246.94, 329.63], arp: [493.88, 659.25, 783.99, 987.77] }
-        ];
-
-        function initAudio() {
-            if (audioCtx) return;
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            audioCtx = new AudioContext();
-
-            masterGain = audioCtx.createGain();
-            masterGain.gain.setValueAtTime(0.35, audioCtx.currentTime);
-
-            delayNode = audioCtx.createDelay();
-            delayNode.delayTime.value = secondsPerBeat * 0.75; 
-
-            const delayFeedback = audioCtx.createGain();
-            delayFeedback.gain.value = 0.25;
-
-            const delayFilter = audioCtx.createBiquadFilter();
-            delayFilter.type = 'lowpass';
-            delayFilter.frequency.value = 1800;
-
-            delayNode.connect(delayFilter);
-            delayFilter.connect(delayFeedback);
-            delayFeedback.connect(delayNode);
-            delayNode.connect(masterGain);
-
-            masterGain.connect(audioCtx.destination);
-        }
-
-        function playElectricPianoNote(freq, time, duration = 2.0, volume = 0.12) {
-            if (!audioCtx) return;
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            const filter = audioCtx.createBiquadFilter();
-
-            osc.type = 'triangle';
-            osc.frequency.setValueAtTime(freq, time);
-
-            filter.type = 'lowpass';
-            filter.frequency.setValueAtTime(1500, time);
-            filter.frequency.exponentialRampToValueAtTime(320, time + duration);
-
-            gain.gain.setValueAtTime(0.0001, time);
-            gain.gain.linearRampToValueAtTime(volume, time + 0.04);
-            gain.gain.exponentialRampToValueAtTime(0.0001, time + duration);
-
-            osc.connect(filter);
-            filter.connect(gain);
-            gain.connect(masterGain);
-            gain.connect(delayNode);
-
-            osc.start(time);
-            osc.stop(time + duration + 0.1);
-        }
-
-        function playArpNote(freq, time) {
-            if (!audioCtx) return;
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            const filter = audioCtx.createBiquadFilter();
-
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(freq, time);
-
-            filter.type = 'lowpass';
-            filter.frequency.setValueAtTime(2600, time);
-
-            gain.gain.setValueAtTime(0.0001, time);
-            gain.gain.linearRampToValueAtTime(0.05, time + 0.02);
-            gain.gain.exponentialRampToValueAtTime(0.0001, time + 1.2);
-
-            osc.connect(filter);
-            filter.connect(gain);
-            gain.connect(masterGain);
-            gain.connect(delayNode);
-
-            osc.start(time);
-            osc.stop(time + 1.3);
-        }
-
-        function playSoftKick(time) {
-            if (!audioCtx) return;
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(100, time);
-            osc.frequency.exponentialRampToValueAtTime(32, time + 0.12);
-
-            gain.gain.setValueAtTime(0.1, time);
-            gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.14);
-
-            osc.connect(gain);
-            gain.connect(masterGain);
-
-            osc.start(time);
-            osc.stop(time + 0.15);
-        }
-
-        function playSoftBrush(time) {
-            if (!audioCtx) return;
-            const bufferSize = audioCtx.sampleRate * 0.04;
-            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-            const output = buffer.getChannelData(0);
-            for (let i = 0; i < bufferSize; i++) {
-                output[i] = Math.random() * 2 - 1;
-            }
-
-            const whiteNoise = audioCtx.createBufferSource();
-            whiteNoise.buffer = buffer;
-
-            const filter = audioCtx.createBiquadFilter();
-            filter.type = 'highpass';
-            filter.frequency.value = 5500;
-
-            const gain = audioCtx.createGain();
-            gain.gain.setValueAtTime(0.012, time);
-            gain.gain.exponentialRampToValueAtTime(0.0001, time + 0.035);
-
-            whiteNoise.connect(filter);
-            filter.connect(gain);
-            gain.connect(masterGain);
-
-            whiteNoise.start(time);
-            whiteNoise.stop(time + 0.05);
-        }
-
-        function scheduleStep(step, time) {
-            const chordIndex = Math.floor((step / 8) % chords.length);
-            const currentChord = chords[chordIndex];
-            const subStep = step % 8;
-
-            if (subStep === 0 || subStep === 4) {
-                currentChord.pad.forEach((freq, idx) => {
-                    playElectricPianoNote(freq, time + (idx * 0.03), 2.2, 0.07);
-                });
-            }
-
-            if (subStep === 0 || subStep === 2 || subStep === 3 || subStep === 5 || subStep === 6) {
-                const arpIndex = (subStep * 2) % currentChord.arp.length;
-                playArpNote(currentChord.arp[arpIndex], time);
-            }
-
-            if (subStep === 0 || subStep === 4) {
-                playSoftKick(time);
-            }
-            if (subStep === 2 || subStep === 6) {
-                playSoftBrush(time);
-            }
-        }
-
-        function scheduler() {
-            while (nextNoteTime < audioCtx.currentTime + 0.15) {
-                scheduleStep(currentStep, nextNoteTime);
-                nextNoteTime += stepTime;
-                currentStep++;
-            }
-            if (isAudioPlaying) {
-                schedulerTimer = setTimeout(scheduler, 40);
-            }
-        }
-
-        function toggleAudio() {
-            initAudio();
-            const musicIcon = document.getElementById('musicIcon');
-            const musicBtn = document.getElementById('musicToggleBtn');
-
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-
-            if (isAudioPlaying) {
-                isAudioPlaying = false;
-                clearTimeout(schedulerTimer);
-                musicIcon.className = "fas fa-music text-lg";
-                musicBtn.classList.remove('bg-sky/40', 'ring-2', 'ring-royal');
-                showToast("Música pausada", "fa-volume-mute");
-            } else {
-                isAudioPlaying = true;
-                currentStep = 0;
-                nextNoteTime = audioCtx.currentTime + 0.05;
-                scheduler();
-                musicIcon.className = "fas fa-volume-up text-lg text-royal";
-                musicBtn.classList.add('bg-sky/40', 'ring-2', 'ring-royal');
-                showToast("Reproduciendo música instrumental", "fa-music");
-            }
-        }
-
+        // OPEN ENVELOPE & START AMBIENT AUDIO
         function openEnvelope() {
-            const env = document.getElementById('envelope-screen');
-            env.classList.add('opened');
-            try {
-                if (!isAudioPlaying) {
-                    toggleAudio();
-                }
-            } catch (e) {
-                console.log("Audio autoplay error:", e);
+            const envelope = document.getElementById('envelope-screen');
+            envelope.classList.add('opened');
+            if (!isPlaying) {
+                startCelestaAudio();
             }
         }
 
-        // Countdown Timer Logic targeting Dec 20, 2026 16:00:00
-        const eventDate = new Date('December 20, 2026 16:00:00').getTime();
+        // FEEDBACK MESSAGE HELPER (NO ALERT())
+        function showFeedback(text, isError = false) {
+            const box = document.getElementById('feedbackBox');
+            box.textContent = text;
+            box.className = `p-3 rounded-xl text-xs text-center font-medium block ${
+                isError 
+                ? 'bg-rose-500/25 border border-rose-400/50 text-rose-100' 
+                : 'bg-emerald-500/25 border border-emerald-400/50 text-emerald-100'
+            }`;
+            setTimeout(() => {
+                box.classList.add('hidden');
+            }, 4000);
+        }
 
+        // COUNTDOWN TIMER TO DECEMBER 20, 2026 AT 4:00 PM
         function updateCountdown() {
-            const now = new Date().getTime();
+            const now = new Date();
+            let targetYear = now.getFullYear();
+            let eventDate = new Date(targetYear, 11, 20, 16, 0, 0); // Month 11 = December
+
+            if (now > eventDate && (now - eventDate) > 86400000) {
+                eventDate = new Date(targetYear + 1, 11, 20, 16, 0, 0);
+            }
+
             const diff = eventDate - now;
 
             if (diff <= 0) {
-                document.getElementById('cd-days').innerText = '00';
-                document.getElementById('cd-hours').innerText = '00';
-                document.getElementById('cd-minutes').innerText = '00';
-                document.getElementById('cd-seconds').innerText = '00';
+                document.getElementById('days').textContent = "00";
+                document.getElementById('hours').textContent = "00";
+                document.getElementById('minutes').textContent = "00";
+                document.getElementById('seconds').textContent = "00";
                 return;
             }
 
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
 
-            document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
-            document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('cd-minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('cd-seconds').innerText = String(seconds).padStart(2, '0');
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
-
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
+        // COPY ADDRESS TO CLIPBOARD
         function copyAddress() {
-            const textToCopy = "Calle Presa valsequillo 580";
-            
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    showToast("Dirección copiada al portapapeles", "fa-copy");
-                }).catch(() => {
-                    fallbackCopy(textToCopy);
-                });
+            const addressText = "Calle: Presa valsequillo 580";
+            const tempInput = document.createElement("input");
+            tempInput.value = addressText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const btnText = document.getElementById('copyBtnText');
+            btnText.textContent = "¡Dirección Copiada!";
+            setTimeout(() => {
+                btnText.textContent = "Copiar Dirección";
+            }, 2500);
+        }
+
+        // ADD TO GOOGLE CALENDAR
+        function addToCalendar() {
+            const title = encodeURIComponent("Mis 14 Años - Grecia Leon Acosta");
+            const location = encodeURIComponent("Calle: Presa valsequillo 580");
+            const details = encodeURIComponent("Te invito a celebrar conmigo mis 14 años. ¡No faltes!");
+            const dates = "20261220T160000/20261220T220000";
+            const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
+            window.open(url, '_blank');
+        }
+
+        // SHOW/HIDE GUESTS COUNT BASED ON ATTENDANCE
+        function toggleGuestsCount() {
+            const attendance = document.getElementById('attendance').value;
+            const container = document.getElementById('guestsCountContainer');
+            if (attendance.startsWith("Sí")) {
+                container.style.display = 'block';
             } else {
-                fallbackCopy(textToCopy);
+                container.style.display = 'none';
             }
         }
 
-        function fallbackCopy(text) {
-            const input = document.createElement('input');
-            input.value = text;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand('copy');
-            document.body.removeChild(input);
-            showToast("Dirección copiada al portapapeles", "fa-copy");
-        }
-
-        function selectAttendance(status) {
-            willAttend = status;
-            const btnYes = document.getElementById('btnYes');
-            const btnNo = document.getElementById('btnNo');
-            const countContainer = document.getElementById('guestsCountContainer');
-
-            if (status) {
-                btnYes.className = "py-2.5 px-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-800 font-medium text-xs flex items-center justify-center space-x-1.5 transition-all shadow-sm";
-                btnNo.className = "py-2.5 px-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-600 font-medium text-xs flex items-center justify-center space-x-1.5 transition-all";
-                countContainer.style.display = "block";
-            } else {
-                btnNo.className = "py-2.5 px-3 rounded-xl border-2 border-rose-500 bg-rose-50 text-rose-800 font-medium text-xs flex items-center justify-center space-x-1.5 transition-all shadow-sm";
-                btnYes.className = "py-2.5 px-3 rounded-xl border border-gray-300 bg-gray-50 text-gray-600 font-medium text-xs flex items-center justify-center space-x-1.5 transition-all";
-                countContainer.style.display = "none";
-            }
-        }
-
-        function sendWhatsAppRSVP(event) {
-            event.preventDefault();
-
+        // WHATSAPP RSVP SUBMISSION
+        function sendWhatsApp() {
             const name = document.getElementById('guestName').value.trim();
+            const attendance = document.getElementById('attendance').value;
             const count = document.getElementById('guestCount').value;
-            const note = document.getElementById('guestNote').value.trim();
+            const customMsg = document.getElementById('guestMessage').value.trim();
 
             if (!name) {
-                showToast("Por favor ingresa tu nombre", "fa-exclamation-circle");
+                showFeedback("Por favor escribe tu nombre antes de confirmar.", true);
+                document.getElementById('guestName').focus();
                 return;
             }
 
-            let message = "";
-            if (willAttend) {
-                message = `¡Hola Grecia! 🌸✨\n\nConfirmación de Asistencia para tus 14 Años:\n\n👤 *Nombre:* ${name}\n✅ *Asistencia:* ¡Sí asistiré con mucho gusto!\n👥 *Lugares:* ${count}`;
+            let message = `❄️ *Confirmación Mis 14 Años - Grecia Leon Acosta* ❄️\n\n`;
+            message += `• *Invitado:* ${name}\n`;
+            message += `• *Asistencia:* ${attendance}\n`;
+            if (attendance.startsWith("Sí")) {
+                message += `• *Pases:* ${count}\n`;
+            }
+            if (customMsg) {
+                message += `• *Mensaje:* "${customMsg}"\n`;
+            }
+
+            showFeedback("Abriendo WhatsApp para enviar tu confirmación...", false);
+
+            const whatsappUrl = `https://wa.me/${HOST_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // WEB AUDIO API - FROZEN CELESTA & WINTER MUSIC BOX SYNTHESIZER
+        let audioCtx = null;
+        let isPlaying = false;
+        let melodyInterval = null;
+
+        function startCelestaAudio() {
+            try {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                isPlaying = true;
+                document.getElementById('musicIcon').className = "fas fa-volume-up text-base text-white";
+
+                // Winter Celesta Arpeggio Notes (F minor / Ab major ethereal progression)
+                const notes = [
+                    523.25, 622.25, 783.99, 1046.50, // Cm / Abmaj7 feel
+                    466.16, 587.33, 698.46, 932.33,  // Bb
+                    415.30, 523.25, 622.25, 830.61,  // Ab
+                    392.00, 493.88, 587.33, 783.99   // G
+                ];
+                let step = 0;
+
+                const playCrystalNote = (freq) => {
+                    if (!isPlaying || !audioCtx) return;
+                    const now = audioCtx.currentTime;
+
+                    const osc = audioCtx.createOscillator();
+                    const overtone = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now);
+
+                    overtone.type = 'triangle';
+                    overtone.frequency.setValueAtTime(freq * 2, now);
+
+                    const overtoneGain = audioCtx.createGain();
+                    overtoneGain.gain.setValueAtTime(0.018, now);
+                    overtoneGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.6);
+
+                    gain.gain.setValueAtTime(0.001, now);
+                    gain.gain.linearRampToValueAtTime(0.075, now + 0.03);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.2);
+
+                    osc.connect(gain);
+                    overtone.connect(overtoneGain);
+                    overtoneGain.connect(gain);
+                    gain.connect(audioCtx.destination);
+
+                    osc.start(now);
+                    overtone.start(now);
+                    osc.stop(now + 2.3);
+                    overtone.stop(now + 2.3);
+                };
+
+                playCrystalNote(notes[0]);
+                step = 1;
+
+                melodyInterval = setInterval(() => {
+                    if (!isPlaying) return;
+                    playCrystalNote(notes[step % notes.length]);
+                    step++;
+                }, 650);
+            } catch (e) {
+                console.warn("Audio init skipped:", e);
+            }
+        }
+
+        function stopCelestaAudio() {
+            isPlaying = false;
+            if (melodyInterval) clearInterval(melodyInterval);
+            document.getElementById('musicIcon').className = "fas fa-volume-mute text-base text-iceFrost/60";
+        }
+
+        function toggleAudio() {
+            if (isPlaying) {
+                stopCelestaAudio();
             } else {
-                message = `¡Hola Grecia! 🌸✨\n\nConfirmación para tus 14 Años:\n\n👤 *Nombre:* ${name}\n❌ *Asistencia:* Lo siento mucho, no podré asistir esta vez.`;
+                startCelestaAudio();
             }
-
-            if (note) {
-                message += `\n💬 *Mensaje:* ${note}`;
-            }
-
-            message += `\n\n¡Gracias por la invitación! 🎉`;
-
-            const waUrl = `https://wa.me/${HOST_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
-            window.open(waUrl, '_blank');
         }
 
-        function addToCalendar() {
-            const title = encodeURIComponent("Mis 14 Años - Grecia");
-            const details = encodeURIComponent("Celebración de los 14 años de Grecia. ¡No faltes! Código/Nota: DLP");
-            const location = encodeURIComponent("Calle Presa valsequillo 580");
-            const start = "20261220T160000";
-            const end = "20261220T220000";
-
-            const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}`;
-            window.open(calUrl, '_blank');
-        }
-
-        function showToast(msg, icon = "fa-check-circle") {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toastMsg');
-            const toastIcon = document.getElementById('toastIcon');
-
-            toastMsg.innerText = msg;
-            toastIcon.className = `fas ${icon} text-sky`;
-
-            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-            toast.classList.add('opacity-100', 'translate-y-0');
-
-            setTimeout(() => {
-                toast.classList.remove('opacity-100', 'translate-y-0');
-                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-            }, 3000);
-        }
-
-        // Background Sparkles
-        const canvas = document.getElementById('sparkleCanvas');
+        // FALLING SNOWFLAKES & ICE SPARKLES CANVAS
+        const canvas = document.getElementById('snowCanvas');
         const ctx = canvas.getContext('2d');
-        let particles = [];
+        let width, height;
+        let snowflakes = [];
 
         function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
         }
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        class Sparkle {
-            constructor() {
-                this.reset();
-            }
-
-            reset() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2.5 + 0.5;
-                this.alpha = Math.random() * 0.8 + 0.2;
-                this.speed = Math.random() * 0.3 + 0.1;
-                this.maxAlpha = this.alpha;
-                this.dir = Math.random() > 0.5 ? 1 : -1;
-            }
-
-            update() {
-                this.y -= this.speed;
-                this.alpha += 0.01 * this.dir;
-                if (this.alpha >= 1 || this.alpha <= 0.1) {
-                    this.dir *= -1;
-                }
-                if (this.y < -10) {
-                    this.reset();
-                    this.y = canvas.height + 10;
-                }
-            }
-
-            draw() {
-                ctx.save();
-                ctx.globalAlpha = this.alpha;
-                ctx.fillStyle = '#a5c4e8';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.restore();
-            }
-        }
-
-        function initParticles() {
-            particles = [];
-            const count = Math.min(Math.floor(window.innerWidth / 20), 45);
+        function createSnowflakes() {
+            snowflakes = [];
+            const count = Math.min(65, Math.floor(width / 14));
             for (let i = 0; i < count; i++) {
-                particles.push(new Sparkle());
+                snowflakes.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 2.8 + 1,
+                    speedY: Math.random() * 0.8 + 0.35,
+                    speedX: (Math.random() - 0.5) * 0.4,
+                    opacity: Math.random() * 0.65 + 0.25,
+                    isCrystal: Math.random() > 0.72
+                });
             }
         }
+        createSnowflakes();
 
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
+        function drawSnow() {
+            ctx.clearRect(0, 0, width, height);
+            snowflakes.forEach(flake => {
+                ctx.save();
+                ctx.globalAlpha = flake.opacity;
+                ctx.fillStyle = '#e2f1ff';
+                ctx.strokeStyle = '#a2d2ff';
+
+                if (flake.isCrystal) {
+                    // Draw tiny 4-point star crystal
+                    ctx.translate(flake.x, flake.y);
+                    ctx.beginPath();
+                    const r = flake.radius * 1.8;
+                    ctx.moveTo(0, -r);
+                    ctx.lineTo(0, r);
+                    ctx.moveTo(-r, 0);
+                    ctx.lineTo(r, 0);
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                } else {
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+
+                flake.y += flake.speedY;
+                flake.x += flake.speedX + Math.sin(flake.y * 0.015) * 0.2;
+
+                if (flake.y > height + 10) {
+                    flake.y = -10;
+                    flake.x = Math.random() * width;
+                }
+                if (flake.x > width + 10) flake.x = -10;
+                if (flake.x < -10) flake.x = width + 10;
             });
-            requestAnimationFrame(animateParticles);
+            requestAnimationFrame(drawSnow);
         }
 
-        initParticles();
-        animateParticles();
+        window.onload = function() {
+            drawSnow();
+        };
     </script>
 </body>
 </html>
